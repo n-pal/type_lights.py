@@ -522,9 +522,9 @@ class Light(HomeAccessory):
         min_temp = 153
         max_temp = 500
         temperature = max(min_temp, min(max_temp, temperature))
-        print("TEMP__", temperature)
-        self.set_ct(temperature)
-        self.char_ct.set_value(temperature)
+        print("TEMP__", temperature+80)
+        self.set_ct(temperature+80)
+        self.char_ct.set_value(temperature+80)
         self.char_ct.notify()
 
         # Sending event notifications
